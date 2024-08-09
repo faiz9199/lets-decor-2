@@ -10,12 +10,10 @@ import Footer from "@/components/layout/Footer";
 export default function Home() {
   return (
     <main>
-      <Navbar />
       <Slider data={data}/>
       <About/>
       <Services/>
       <Testimonial/>
-      <Footer/>
     </main>
   );
 }
