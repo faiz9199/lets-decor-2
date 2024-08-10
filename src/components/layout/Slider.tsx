@@ -20,7 +20,7 @@ interface SliderProps {
 
 const Slider: React.FC<SliderProps> = ({ data }) => {
   return (
-    <section className="w-full">
+    <section className="w-full -mt-2 md:mt-0">
       <div className="h-96 md:h-screen">
         <Swiper
           navigation

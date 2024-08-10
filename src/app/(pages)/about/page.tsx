@@ -1,4 +1,3 @@
-import Navbar from "@/components/layout/Navbar";
 import Image from "next/image";
 import about from "../../../../public/aboutus.jpg";
 

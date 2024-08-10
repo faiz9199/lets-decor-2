@@ -24,17 +24,22 @@ const Navbar = () => {
       <div className="border border-b-slate-200 p-2">
         <p className="text-xs">example@gmail.com | +91 91XXXXXXX</p>
       </div>
-      <div className="flex items-center justify-between p-2">
+      <div className="flex items-center justify-between border border-b-slate-200 md:border-0 mb-2 p-2">
         <div className="hidden md:flex items-center gap-4">
           <FaFacebookSquare size={20} color="#F59CB4" />
           <CgMail size={26} color="#F59CB4" />
           <FaInstagram size={20} color="#F59CB4" />
         </div>
         <div>
-          <Link href="/">
-            <Image src={logo} width={100} alt="logo" />
-          </Link>
-        </div>
+  <Link href="/">
+    <Image
+      src={logo}
+      alt="logo"
+      className="w-20 md:w-24"
+    />
+  </Link>
+</div>
+
         <div className="hidden md:block">
           <FaSearch size={20} color="#F59CB4" />
         </div>
@@ -59,13 +64,13 @@ const Navbar = () => {
             <Link href="/about">About Us</Link>
           </li>
           <li className="nav-item">
-            <a href="/">Services</a>
+            <Link href="/services">Services</Link>
           </li>
           <li className="nav-item">
             <a href="/">Pricing</a>
           </li>
           <li className="nav-item">
-            <a href="/">Lets Talk</a>
+            <Link href="/contact">Lets Talk</Link>
           </li>
         </ul>
       </div>
@@ -84,13 +89,13 @@ const Navbar = () => {
             <Link href="/about">About Us</Link>
           </li>
           <li className="uppercase border-b border-gray-200 pb-2" onClick={closeMenu}>
-            <a href="/">Services</a>
+            <Link href="/services">Services</Link>
           </li>
           <li className="uppercase border-b border-gray-200 pb-2" onClick={closeMenu}>
             <a href="/">Pricing</a>
           </li>
           <li className="uppercase border-b border-gray-200 pb-2" onClick={closeMenu}>
-            <a href="/">Lets Talk</a>
+            <Link href="/contact">Lets Talk</Link>
           </li>
         </ul>
       </div>
