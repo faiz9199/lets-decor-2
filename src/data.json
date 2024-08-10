@@ -1,10 +1,22 @@
 [
   {
     "id": 1,
-    "image": "/wedding.jpg"
+    "image": "/IMG_7003.JPG"
   },
   {
     "id": 2,
-    "image": "/cover.jpg"
+    "image": "/IMG-20240803-WA0017.jpg"
+  },
+  {
+    "id": 3,
+    "image": "/IMG-20240803-WA0018.jpg"
+  },
+  {
+    "id": 4,
+    "image": "/IMG_0745.jpg"
+  },
+  {
+    "id": 5,
+    "image": "/IMG-20240803-WA0003.jpg"
   }
 ]

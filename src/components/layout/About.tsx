@@ -1,10 +1,18 @@
+"use client"
+
 import Image from "next/image";
 import aboutus from "../../../public/aboutus.jpg";
 import { Button } from "../ui/button";
+import React,{useEffect} from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const About = () => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
-    <section className="flex flex-col items-center m-6 md:m-12">
+    <section className="flex flex-col items-center m-6 md:m-12" data-aos="fade-left" data-aos-duration="2000">
       <p className="text-2xl md:text-4xl font-semibold mb-6 md:mb-10 text-center md:text-left">
         “It’s All In The Details!” – My Motto
       </p>
