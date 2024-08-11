@@ -1,22 +1,22 @@
 [
   {
     "id": 1,
-    "image": "/IMG_7003.JPG"
+    "image": "/cover1.jpg"
   },
   {
     "id": 2,
-    "image": "/IMG-20240803-WA0017.jpg"
+    "image": "/cover2.jpg"
   },
   {
     "id": 3,
-    "image": "/IMG-20240803-WA0018.jpg"
+    "image": "/cover3.jpg"
   },
   {
     "id": 4,
-    "image": "/IMG_0745.jpg"
+    "image": "/cover4.jpg"
   },
   {
     "id": 5,
-    "image": "/IMG-20240803-WA0003.jpg"
+    "image": "/cover5.jpg"
   }
 ]

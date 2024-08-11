@@ -1,5 +1,5 @@
 import Image from "next/image";
-import about from "../../../../public/aboutus.jpg";
+import about from "../../../../public/cover2.jpg";
 
 const page = () => {
   return (

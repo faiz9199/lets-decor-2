@@ -3,9 +3,10 @@
 import React from "react";
 
 // Swiper components, modules, and styles
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import 'swiper/css/effect-fade';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
@@ -21,13 +22,14 @@ interface SliderProps {
 const Slider: React.FC<SliderProps> = ({ data }) => {
   return (
     <section className="w-full -mt-2 md:mt-0">
-      <div className="h-96 md:h-screen">
+      <div className="h-72 md:h-screen">
         <Swiper
+        effect="fade"
           navigation
           pagination={{ type: "bullets", clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           loop={true}
-          modules={[Autoplay, Navigation, Pagination]}
+          modules={[Autoplay, Navigation, Pagination, EffectFade]}
           className="h-full w-full"
         >
           {data.map(({ id, image }) => (

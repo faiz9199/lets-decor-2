@@ -1,28 +1,37 @@
 import React from "react";
 import { Button } from "./button";
+import Link from "next/link";
 
 interface CardProps {
   data: {
     id: number;
+    title: string;
+    description: string;
     image: string;
+    category: string; // Add a category field if needed for dynamic routing
   };
 }
 
 const Card: React.FC<CardProps> = ({ data }) => {
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <img className="rounded-t-lg" src={data.image} alt={`Image ${data.id}`} />
-
-      <div className="p-2">
-        <h5 className="mb-2 md:text-xl text-base font-bold tracking-tight text-gray-900 dark:text-white">
-          Noteworthy technology
+    <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow">
+      <div className="h-48 overflow-hidden rounded-t-lg">
+        <img
+          className="object-cover h-full w-full"
+          src={data.image}
+          alt="image"
+        />
+      </div>
+      <div className="p-4">
+        <h5 className="mb-2 md:text-xl text-base font-bold tracking-tight">
+          {data.title}
         </h5>
-
-        <p className="mb-3 text-xs md:font-normal text-gray-700 dark:text-gray-400">
-          Here are the biggest enterprise technology acquisitions of 2021 so
-          far...
-        </p>
-        <Button size={"sm"}>Read More</Button>
+        <p className="mb-6 text-sm md:text-base">{data.description}</p>
+        <Link href="/services">
+          <Button size={"sm"} className="w-full">
+            Read More
+          </Button>
+        </Link>
       </div>
     </div>
   );
