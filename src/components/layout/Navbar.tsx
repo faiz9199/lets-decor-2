@@ -21,9 +21,6 @@ const Navbar = () => {
   };
   return (
     <nav className="flex flex-col">
-      <div className="border border-b-slate-200 p-2">
-        <p className="text-xs">example@gmail.com | +91 91XXXXXXX</p>
-      </div>
       <div className="flex items-center justify-between border border-b-slate-200 md:border-0 mb-2 p-2">
         <div className="hidden md:flex items-center gap-4">
           <FaFacebookSquare size={20} color="#F59CB4" />
@@ -67,10 +64,10 @@ const Navbar = () => {
             <Link href="/services">Services</Link>
           </li>
           <li className="nav-item">
-            <a href="/">Pricing</a>
+            <Link href="/ourWorks">Our Works</Link>
           </li>
           <li className="nav-item">
-            <Link href="/contact">Lets Talk</Link>
+            <Link href="/contact">Contact Us</Link>
           </li>
         </ul>
       </div>
@@ -92,10 +89,10 @@ const Navbar = () => {
             <Link href="/services">Services</Link>
           </li>
           <li className="uppercase border-b border-gray-200 pb-2" onClick={closeMenu}>
-            <a href="/">Pricing</a>
+          <Link href="/ourWorks">Our Works</Link>
           </li>
           <li className="uppercase border-b border-gray-200 pb-2" onClick={closeMenu}>
-            <Link href="/contact">Lets Talk</Link>
+            <Link href="/contact">Contact Us</Link>
           </li>
         </ul>
       </div>

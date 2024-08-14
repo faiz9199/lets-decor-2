@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = ({ data }) => {
           alt="image"
         />
       </div>
-      <div className="p-4">
+      <div className="p-6">
         <h5 className="mb-2 md:text-xl text-base font-bold tracking-tight">
           {data.title}
         </h5>

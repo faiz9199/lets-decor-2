@@ -1,27 +1,38 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
-const TestimonialCard = () => {
+// Define the types for the props
+interface TestimonialCardProps {
+  name: string;
+  date: string;
+  description: string;
+  rating: number;  // New rating prop
+}
+
+const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, date, description, rating }) => {
   return (
-    <div className="flex flex-col gap-2 border border-slate-300 max-w-xs p-5">
+    <div className="flex flex-col gap-2 shadow-lg max-w-xs md:max-w-lg p-6 my-10 mx-auto">
       <div className="flex gap-4 items-center">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
-          <AvatarFallback>CN</AvatarFallback>
+          <AvatarFallback>{name.charAt(0)}{name.split(" ")[1]?.charAt(0)}</AvatarFallback>
         </Avatar>
         <div className="flex flex-col">
-        <p className="text-sm font-semibold">Faiz Ahmad</p>
-        <p className="text-xs">12/12/20024</p>
+          <p className="text-sm font-semibold">{name}</p>
+          <p className="text-xs">{date}</p>
         </div>
       </div>
-      <div className="">⭐⭐⭐⭐⭐</div>
+      <div className="flex">
+        {/* Dynamically render the stars based on the rating */}
+        {Array.from({ length: rating }, (_, index) => (
+          <span key={index}>⭐</span>
+        ))}
+      </div>
       <div>
         <p className="text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores a
-          accusantium, alias ullam in, itaque quas laborum quasi velit assumenda
-          repellendus
+          {description}
         </p>
       </div>
     </div>
   );
 };
+
 export default TestimonialCard;
